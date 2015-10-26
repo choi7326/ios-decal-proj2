@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dVD-K2-Lma">
+                                <rect key="frame" x="210" y="73" width="180" height="180"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="JgI-mX-TWV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guesses:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rz7-gV-LVq">
+                                <rect key="frame" x="22" y="375" width="71" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kve-lo-0Wb">
+                                <rect key="frame" x="20" y="20" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="TappedNewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lch-77-QIi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HS7-n2-F2z">
+                                <rect key="frame" x="537" y="550" width="43" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="TappedGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rR7-LX-q55"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-oC-bER">
+                                <rect key="frame" x="276" y="261" width="49" height="24"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKj-ap-Irh">
+                                <rect key="frame" x="509" y="20" width="71" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Start Over"/>
+                                <connections>
+                                    <action selector="TappedStartOverButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZE-jr-fCH"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0J-LA-jO5">
+                                <rect key="frame" x="150" y="389" width="300" height="150"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="VPk-CV-R1X"/>
+                                    <constraint firstAttribute="width" constant="300" id="aSK-uf-ONy"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dVD-K2-Lma" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="Bwc-Kb-gMr"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Rz7-gV-LVq" secondAttribute="leading" constant="-2" id="Eia-Sx-ZaM"/>
+                            <constraint firstItem="z0J-LA-jO5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EpS-oL-8us"/>
+                            <constraint firstItem="dVD-K2-Lma" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KiS-43-o06"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sKj-ap-Irh" secondAttribute="trailing" id="LSQ-JG-LU1"/>
+                            <constraint firstItem="E5T-oC-bER" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-27" id="T7D-Lb-xZy"/>
+                            <constraint firstItem="kve-lo-0Wb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UBX-Rh-JUd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HS7-n2-F2z" secondAttribute="bottom" constant="20" id="ZjJ-Yh-Nse"/>
+                            <constraint firstItem="E5T-oC-bER" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aHz-z3-43R"/>
+                            <constraint firstItem="z0J-LA-jO5" firstAttribute="top" secondItem="Rz7-gV-LVq" secondAttribute="bottom" constant="-7" id="gNd-Vy-KtW"/>
+                            <constraint firstItem="sKj-ap-Irh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hYK-ox-9SE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HS7-n2-F2z" secondAttribute="trailing" id="n3f-s3-5sb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kve-lo-0Wb" secondAttribute="leading" id="o46-Ss-eJo"/>
+                            <constraint firstItem="E5T-oC-bER" firstAttribute="top" secondItem="dVD-K2-Lma" secondAttribute="bottom" constant="8" id="oW6-Hy-YzG"/>
+                            <constraint firstItem="HS7-n2-F2z" firstAttribute="top" secondItem="z0J-LA-jO5" secondAttribute="bottom" constant="11" id="zDm-6m-6NN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Guesses" destination="Rz7-gV-LVq" id="dKb-f6-AkF"/>
+                        <outlet property="HangmanImage" destination="dVD-K2-Lma" id="4iT-6y-MHA"/>
+                        <outlet property="KnownString" destination="E5T-oC-bER" id="TbU-RC-vA1"/>
+                        <outlet property="picker" destination="z0J-LA-jO5" id="wFs-he-2b5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="1133"/>
+        </scene>
+    </scenes>
+</document>
